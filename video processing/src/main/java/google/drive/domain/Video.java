@@ -57,13 +57,14 @@ public class Video  {
 //<<< Clean Arch / Port Method
     public static void processVideo(FileUploaded fileUploaded){
 
-        /** Example 1:  new item 
+        /** Example 1:  new item      */
         Video video = new Video();
+        video.setFileId(fileUploaded.getId());
         repository().save(video);
 
         VideoProcessed videoProcessed = new VideoProcessed(video);
         videoProcessed.publishAfterCommit();
-        */
+   
 
         /** Example 2:  finding and process
         

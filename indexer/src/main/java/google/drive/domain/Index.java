@@ -57,13 +57,15 @@ public class Index  {
 //<<< Clean Arch / Port Method
     public static void makeIndex(FileUploaded fileUploaded){
 
-        /** Example 1:  new item 
+        /** Example 1:  new item         */
         Index index = new Index();
+        index.setFileId(fileUploaded.getId());
+        
         repository().save(index);
 
         FileIndexed fileIndexed = new FileIndexed(index);
         fileIndexed.publishAfterCommit();
-        */
+
 
         /** Example 2:  finding and process
         
